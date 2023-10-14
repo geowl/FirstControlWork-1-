@@ -21,3 +21,33 @@ string[] InitialArrayOfStrings()
     }
     return stringArray;
 }
+
+
+string[] FilterArrayOfStrings(string[] stringArray)
+{
+    int newSize = 0; 
+    for (int i = 0; i < stringArray.Length; i++)
+    {
+        if (stringArray[i].Length <= 3)
+        {
+            newSize++; 
+        }
+    }
+
+    string[] resultArray = new string[newSize]; 
+
+    int resultIndex = 0; 
+    for (int i = 0; i < stringArray.Length; i++)
+    {
+        if (stringArray[i].Length <= 3)
+        {
+            resultArray[resultIndex] = stringArray[i]; 
+            resultIndex++;
+        }
+    }
+    return resultArray;
+}
+
+
+
+
