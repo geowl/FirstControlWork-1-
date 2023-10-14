@@ -48,6 +48,18 @@ string[] FilterArrayOfStrings(string[] stringArray)
     return resultArray;
 }
 
+void PrintArrayStr(string[] array)
+{
+    Console.Write("[");
+    Console.Write(string.Join(", ", array));
+    Console.WriteLine("]");
+}
 
 
-
+Console.WriteLine("Изначальный массив: ");
+string[] initialArray = InitialArrayOfStrings(); 
+PrintArrayStr(initialArray);
+Console.WriteLine();
+Console.WriteLine("Измененный массив: ");
+string[] filteredArray = FilterArrayOfStrings(initialArray);
+PrintArrayStr(filteredArray);
